@@ -1,0 +1,316 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-races {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si no caben */
+    gap: 20px; /* Espacio entre los elementos */
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+.title-races {
+    text-align: center; /* Opción para centrar horizontalmente */
+    margin-bottom: 20px; /* Espacio entre el título y el contenido de abajo */
+    margin-top: 20px;
+}
+.title-races h2 {
+    font-size: 34px; /* Ajusta el tamaño del texto */
+    font-family: Montserrat;
+}
+
+/* Contenedor de las imágenes y párrafos */
+.content-races div {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna: imagen arriba, texto abajo */
+    align-items: center; /* Centra el contenido horizontalmente */
+    margin-bottom: 20px;
+}
+
+/* Estilos para las imágenes */
+.content-races img {
+    width: 200px; /* Tamaño fijo para las imágenes */
+    height: 200px; /* Altura fija para mantener consistencia */
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+}
+
+/* Estilos para los párrafos */
+.content-races p {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+.image-container {
+    position: relative;
+    width: 100%; /* La imagen ocupará el 100% del ancho disponible */
+    max-width: 100vw; /* Para asegurar que no exceda el ancho de la ventana */
+}
+
+/* Imagen responsiva */
+.image-container img {
+    width: 100%; /* La imagen se ajusta al ancho del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+}
+/* Texto sobre la imagen */
+.text-overlay {
+    position: absolute; /* Posicionamiento relativo a la imagen */
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-20%, -50%); /* Ajusta el centro para el texto */
+    color: white; /* Color del texto */
+    text-align: center; /* Alineación del texto */
+    font-size: 2vw; /* Tamaño del texto relativo al ancho de la ventana */
+    margin-bottom: 20px;
+}
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: white;
+    border-bottom: 1px solid white;
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: green;
+}
+
+.login-button a {
+    padding: 8px 16px;
+    background-color: #f8f4f0;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #d3cfcf;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: Montserrat;
+}
+
+.login-button a:hover {
+    background-color: #e2e2e2;
+}
+.content {
+    flex: 1; /* Hace que el contenido ocupe el espacio necesario y empuje el footer hacia abajo */
+}
+/* Estilos del footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-family: Montserrat;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-family: Montserrat;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 5px 0;
+    }
+
+    .login-button {
+        margin-top: 10px;
+    }
+    .text-overlay {
+        font-size: 4vw; /* Aumenta el tamaño del texto en dispositivos pequeños */
+    }
+
+    .text-overlay h1 {
+        font-size: 6vw; /* Ajusta el título en pantallas pequeñas */
+    }
+
+    .text-overlay p {
+        font-size: 3vw; /* Ajusta el párrafo en pantallas pequeñas */
+    }
+    .footer {
+        padding: 15px;
+    }
+
+    .footer-links a {
+        margin: 0 5px;
+    }
+    .content-races {
+        flex-direction: column; /* Para pantallas pequeñas, se organiza en columna */
+    }
+
+    .content-races img {
+        width: 150px;
+        height: 100px;
+    }
+
+    .content-races p {
+        font-size: 14px;
+    }
+    .news-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .news-image {
+        margin: 20px 0;
+    }
+
+    .news-image img {
+        width: 100%;
+    }
+}
+/* Estilos generales */
+.news-section {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.news-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de cada artículo de noticias */
+.news-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Contenido de texto a la izquierda */
+.news-text {
+    flex: 2;
+}
+
+.news-text .source {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.news-text h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.news-text p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Estilo del botón de leer más */
+.read-more {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #f0e5d9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.read-more:hover {
+    background-color: #e0d0bf;
+}
+
+/* Imagen a la derecha */
+.news-image {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.news-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.montserrat-font{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Para otros navegadores */
+  html {
+    scrollbar-width: none; /* Firefox */
+  }
