@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LICIBA</title>
+    <link rel="stylesheet" href="styles/styleLogin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Montserrat:ital,wght@0,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+                <form action="/userRegister" method="post">
+                    <h1>Crear Cuenta</h1>
+                    <div class="social-container">
+                        <!-- <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
+                    </div>
+                    <!-- <span>or use your email for registration</span> -->
+                    <div class="infield">
+                        <input type="text" placeholder="Name" name="fullName" required />
+                        <label></label>
+                    </div>
+                    <div class="infield">
+                        <input type="email" placeholder="Email" name="email" required/>
+                        <label></label>
+                    </div>
+                    <div class="infield">
+                        <input type="password" placeholder="Password" name="password" required/>
+                        <label></label>
+                    </div>
+                    <button>Registrate</button>
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <form action="#">
+                    <h1>Iniciar Sesion</h1>
+                    <div class="social-container">
+                        <!-- <a href="#" class="social"><img src="/components/images/facebook.png"></i></a>
+                        <a href="#" class="social"><img src="/components/images/chrome.png"></a> -->
+                    </div>
+                    <div class="infield">
+                        <input type="email" placeholder="Email" name="email"/>
+                        <label></label>
+                    </div>
+                    <div class="infield">
+                        <input type="password" placeholder="Password" />
+                        <label></label>
+                    </div>
+                    <a href="#" class="forgot">Olvisdaste tu contraseña?</a>
+                    <button class="signBtn">Unete</button>
+                </form>
+            </div>
+            <div class="overlay-container" id="overlayCon">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Bienvenido a LICIBA!</h1>
+                        <p>Crea tu cuenta y compite por el podium 🏆</p>
+                        <button>Inicia Sesion</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Hola, estas de vuelta?</h1>
+                        <p>Date prisa e inicia sesion para competir a lo grande!</p>
+                        <button class="signBtn">Registrate</button>
+                    </div>
+                </div>
+                <button id="overlayBtn"></button>
+            </div>
+        </div>
+        <script>
+            const container = document.getElementById('container');
+            const overlayCon = document.getElementById('overlayCon');
+            const overlayBtn = document.getElementById('overlayBtn');
+
+            overlayBtn.addEventListener('click', ()=>{
+                container.classList.toggle('right-panel-active');
+                overlayBtn.classList.remove('btnScaled');
+                window.requestAnimationFrame( ()=>{
+                    overlayBtn.classList.add('btnScaled');
+                })
+            });
+        </script>
+    </main>
+    <footer></footer>
+</body>
+</html>
