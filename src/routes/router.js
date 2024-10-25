@@ -13,5 +13,6 @@ router.get('/register', controller.register)
 //Consultas
 const crud = require('../controllers/crud');
 router.post('/userRegister', crud.userRegister);
+router.post('/userProfiles', crud.userProfiles);
 
 module.exports = router;
