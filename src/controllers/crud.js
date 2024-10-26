@@ -6,12 +6,6 @@ const express = require('express');
 const app = express();
 
 
-app.use(session({
-  secret: '12345678',
-  resave: false,
-  saveUninitialized: true
-}));
-
 
 //Create User
 exports.userRegister = (req, res) => {
